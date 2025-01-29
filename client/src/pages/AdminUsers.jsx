@@ -8,7 +8,7 @@ export const AdminUsers = () => {
 
     const getAllUsersData = async () => {
         try {
-            const response = await fetch("${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/admin/users", {
+            const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/admin/users`, {
                 method: "GET",
                 headers: {
                     Authorization: authorizationToken,

@@ -31,7 +31,7 @@ const {user}=useAuth()
   const handleSubmit=async (e)=>{
     e.preventDefault();
     try {
-      const response=await fetch("${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/form/contact"
+      const response=await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/form/contact`
         ,{
           method:"POST",
           headers:{
