@@ -16,7 +16,7 @@ var corsOptions = {
      method:"GET,POST,PUT,DELETE,PATCH,HEAD",
      credentials:true,
   }
-
+app.use("/",authRoute)
 app.use(cors(corsOptions))
 app.use(express.json())
 app.use("/api/auth",authRoute)
