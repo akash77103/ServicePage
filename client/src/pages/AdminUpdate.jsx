@@ -14,7 +14,7 @@ console.log("params",params)
     const getSingleUserData=async ()=>{
        
         try {
-            const response = await fetch(`http://localhost:5000/api/admin/users/${params.id}`, {
+            const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/admin/users/${params.id}`, {
                 method: "GET",
                 headers: {
                   
@@ -50,7 +50,7 @@ console.log("params",params)
       e.preventDefault()
 
       try {
-        const response=await fetch(`http://localhost:5000/api/admin/users/update/${params.id}`,
+        const response=await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/admin/users/update/${params.id}`,
           {
             method:"PATCH",
             headers:{

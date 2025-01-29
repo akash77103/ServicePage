@@ -22,7 +22,7 @@ export const AuthContext=createContext()
     const userAuthentication=async ()=>{
             try {
                 setisLoading(true)
-               const response= await fetch("http://localhost:5000/api/auth/user",
+               const response= await fetch("${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/auth/user",
                {
                 method: "GET",
                 headers:{
@@ -49,7 +49,7 @@ export const AuthContext=createContext()
         
        const getServices=async()=>{
             try {
-                const response=await fetch("http://localhost:5000/api/data/service",{
+                const response=await fetch("${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/data/service",{
                     method:"GET",
                 })
                 if(response.ok){
